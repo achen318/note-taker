@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Note Taker</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <meta name="author" content="Anthony Chen" />
+    <meta name="description" content="A website for saving notes." />
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <button onclick="openModal()">Create Note</button>
+
+    <div class="modal-container">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">×</span>
+
+        <form name="note-form" id="note-form" target="frame">
+          <label for="title">Title</label><br />
+          <input type="text" id="title" name="title" required /><br />
+
+          <label for="content">Content</label><br />
+          <textarea name="content" rows="10" cols="30" required></textarea
+          ><br />
+
+          <input type="submit" id="submit-btn" value="Submit" />
+          <input type="button" id="delete-btn" value="Delete" />
+        </form>
+      </div>
+    </div>
+
+    <div class="notes-container"></div>
+
+    <!-- iframe to prevent page reload upon form submission-->
+    <iframe name="frame"></iframe>
+  </body>
+</html>

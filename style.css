@@ -1,0 +1,109 @@
+:root {
+  --yellow: #feff9c;
+}
+
+body {
+  background-color: skyblue;
+
+  font-family: 'Comic Sans MS', 'Arial', sans-serif;
+}
+
+button {
+  border: 0;
+  border-radius: 2em;
+  padding: 1em;
+
+  background-color: #50c878;
+
+  color: white;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: none;
+
+  overflow: auto;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+  margin: 25%;
+  border: 2px solid black;
+  border-radius: 0.5em;
+  padding: 1%;
+
+  background-color: var(--yellow);
+}
+
+.close-btn {
+  float: right;
+
+  font-size: 2rem;
+  font-weight: bold;
+  color: lightgray;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  cursor: pointer;
+
+  text-decoration: none;
+  color: black;
+}
+
+input[type='text'] {
+  border: 1px solid black;
+  width: 80%;
+
+  background-color: rgba(0, 0, 0, 0);
+}
+
+textarea {
+  border: 1px solid black;
+  width: 80%;
+
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.notes-container {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: auto;
+
+  padding: 1%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* tablet */
+  .notes-container {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  /* desktop */
+  .notes-container {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+.note {
+  overflow: auto;
+
+  border: 2px solid black;
+  border-radius: 0.5em;
+  padding: 1%;
+
+  background-color: var(--yellow);
+}
+
+iframe {
+  display: none;
+}
